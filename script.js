@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         quoteContainer.innerHTML = '<p>Loading New Quote...</p>';
         
         fetch("https://api.api-ninjas.com/v1/quotes", {
-            headers: {"X-Api-Key": "Tj1Q951NbhWUHOY3LLRKzg==c1bFeAzQxgHw84RV"}
+            headers: {"X-Api-Key": }
         })
         .then((response) => {
             if (!response.ok) {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //     let div = document.createElement("div");
 //     quote_container.innerHTML = "Loading New Quote...";
 //     fetch("https://api-ninjas.com/api/quotes", {
-//         headers: {"X-Api-Key": "Tj1Q951NbhWUHOY3LLRKzg==c1bFeAzQxgHw84RV"}
+//         headers: {"X-Api-Key":}
 //     })
 //     .then((response) => response.json())
 //     .then((data) => {
