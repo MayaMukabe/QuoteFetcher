@@ -5,8 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function generateQuote() {
         quoteContainer.innerHTML = '<p>Loading New Quote...</p>';
         
+        // Get API key from environment or use placeholder
+        const apiKey = process.env.API_KEY || window.API_KEY;
+        
         fetch("https://api.api-ninjas.com/v1/quotes", {
-            headers: {"X-Api-Key": "Tj1Q951NbhWUHOY3LLRKzg==c1bFeAzQxgHw84RV"}
+            headers: {"X-Api-Key": apiKey}
         })
         .then((response) => {
             if (!response.ok) {
